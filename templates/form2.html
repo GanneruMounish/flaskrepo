@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="'ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Basic</title>
+</head>
+<body>
+    <h1>Register here!</h1>
+    <form method='POST'>
+        {{form.hidden_tag()}}
+        {{form.Firstname.label}}{{form.Firstname}}
+        <br>
+        {{form.Lastname.label}}{{form.Lastname}}
+        <br>
+        {{form.DOB.label}}{{form.DOB}}
+        <br>
+        {{form.occupation.label}}{{form.occupation}}
+        <br>
+        {{form.gender.label}}{{form.gender}}
+        <br>
+        <p>feedback:</p>
+        {{form.feedback}}
+        <br>
+        {{form.submit}}
+    </form>
+</body>
+</html>

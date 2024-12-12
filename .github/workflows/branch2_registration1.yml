@@ -29,6 +29,14 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Install Gunicorn
+        run: pip install gunicorn
+
+      - name: Set Flask environment variables
+        run: |
+          echo "FLASK_APP=app.py" >> $GITHUB_ENV
+          echo "FLASK_ENV=production" >> $GITHUB_ENV
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
